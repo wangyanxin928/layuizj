@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <!--layui框架css-->
+    <link rel="stylesheet" href="../layui/css/layui.css"  media="all">
+    <!--图片上传样式-->
+    <link rel="stylesheet" type="text/css" href="../js/ossupload/uploadstyle.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <title>文件图片上传展现</title>
+</head>
+<body>
+<ul class="layui-nav">
+    <li class="layui-nav-item "><a href="input.html">文本框</a></li>
+    <li class="layui-nav-item"><a href="select.html">单选多选</a></li>
+    <li class="layui-nav-item layui-this"><a href="fileimg.html">文件上传</a></li>
+</ul>
+<form class="layui-form">
+    <fieldset class="layui-elem-field layui-field-title" style="margin-top: 50px;">
+        <legend>图片上传</legend>
+    </fieldset>
+    <div class="imglist">
+        <div class="layui-form-item" id="ossfileimg">
+            <div class="layui-inline"><img class="imgradius10" id="ossfile1" src="http://layer.layui.com/images/tong.jpg"></div>
+            <div class="layui-inline"><img id="ossfile2" src="http://layer.layui.com/images/tong.jpg"></div>
+            <div class="layui-inline"><img id="ossfile3" src="http://layer.layui.com/images/tong.jpg"></div>
+            <div class="layui-inline"><img id="ossfile4" src="http://layer.layui.com/images/tong.jpg"></div>
+        </div>
+        <div class="site-demo-upbar" id="containerimg">
+            <div class="layui-box layui-upload-button" id="imgfiles1">
+                <span class="layui-upload-icon"><i class="layui-icon"></i>选择图片</span>
+            </div>
+            <div class="layui-box layui-upload-button" id="imgloadfiles" style="display: none;">
+                <span class="layui-upload-icon">确认上传</span>
+            </div>
+        </div>
+    </div>
+</form>
+<div class="layui-progress" lay-showpercent="true" style="display: none;">
+    <div class="layui-progress-bar" lay-percent="20%"></div>
+</div>
+
+<script src="../layui/layui.js" charset="utf-8"></script>
+<!--文件上传要引用的三个js-->
+<script type="text/javascript" src="../js/ossupload/base64.js"></script>
+<script type="text/javascript" src="../js/ossupload/plupload-2.1.2/js/plupload.full.min.js"></script>
+<script type="text/javascript" src="../js/ossupload/upload.js"></script>
+<script type="text/javascript">
+    //图片上传需要的对象
+    var uploadoption={
+        "choosebtn":"imgfiles1",// 选择文件按钮id
+        "uploadbtn":"imgloadfiles",//确定上传按钮id
+        "container":"containerimg",//选择和确实上传按钮的父节点id
+        "ossfile":"ossfileimg",//图片存放位置区域id
+        "g_dirname":"ceshi/",//如果不填，默认是上传到根目录, 注意目录要带/结尾
+        "g_object_name_type":"local_name",//local_name:上传文件名字保持本地文件名字,random_name:上传文件名字是随机文件名
+        "type":"img"//head头像模式显示为头像,img图片格式可以是多个图片是个图片列表,file文件格式一个个文件列表带进度条显示
+    };
+</script>
+</body>
+</html>

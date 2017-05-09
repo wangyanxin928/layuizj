@@ -1,0 +1,14 @@
+input,select,textarea {
+    outline: none;
+    -webkit-appearance: none; /*去除系统默认的样式*/
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* 点击高亮的颜色*/
+}
+/*form距离最外面边框距离,默认为0*/
+.layui-form{padding: 15px;}
+.widthbf50{width: 50%;}
+.widthbf50 .layui-input-inline{width: auto;}
+
+
+.dataInputHeader{position: absolute;top: -10px; left: 10px;  padding: 0px 5px;  background-color: #fff;z-index: 9;}
+.dataInputShort{width: 280px;}
+.dataInputLong{max-width: 704px;}
